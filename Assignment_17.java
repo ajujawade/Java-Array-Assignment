@@ -23,18 +23,39 @@ public class Assignment_17 {
             System.out.print(arr + " ");
         }
         System.out.println();
-        System.out.print("Duplicate Values in Array : ");
+
+        int newSize = 0;
+
         boolean hasDuplicate = false;
 
         for (int i = 0; i < sizeArray; i++) {
             for (int j = i + 1; j < sizeArray; j++) {
                 if (array[i] == array[j]) {
-                    System.out.println(array[i] + " ");
+                    newSize++;
                     hasDuplicate = true;
                     break;
                 }
             }
         }
+
+        int[] updatedArray = new int[newSize];
+
+        for (int i = 0; i < newSize; i++){
+                for (int j = i + 1; j < newSize; j++) {
+                    if (array[i] == array[j]) {
+                        updatedArray[i] = array[i];
+                    }
+                }
+            }
+
+        System.out.println("Updated Array without Duplicate Value : ");
+
+        for (int arr : updatedArray){
+
+            System.out.print(arr + " ");
+
+        }
+
         if (!hasDuplicate) {
             System.out.println("No Duplicates Found !");
         }

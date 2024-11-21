@@ -36,6 +36,14 @@ public class Assignment_15 {
             }
         }
 
+        System.out.println("Sorted Array : " );
+
+        for (int arr : sortedArray){
+            System.out.println(arr + " ");
+        }
+
+        System.out.println(sortedArray[sizeArray - 1]);
+
         //Sorting the new non-zero array where zero is at the front.
 
 //        for (int i = 0; i < sizeArray - 1; i++){
@@ -64,11 +72,11 @@ public class Assignment_15 {
             }
         }
 
-        for (int i = nonZeroCount; i < sizeArray; i++){
-
-            sortedArray[nonZeroCount++] = 0 ;
-
-        }
+//        for (int i = nonZeroCount; i < sizeArray; i++){
+//
+//            sortedArray[nonZeroCount++] = 0 ;
+//
+//        }
 
         System.out.println();
         System.out.println("Sorted Array : " );
