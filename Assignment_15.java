@@ -8,7 +8,7 @@ public class Assignment_15 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter Size Of Array");
+        System.out.println("Enter Size Of Array : ");
         int sizeArray = scanner.nextInt();
         int[] array = new int[sizeArray];
 
@@ -35,11 +35,11 @@ public class Assignment_15 {
                 sortedArray[nonZeroCount++] = array[i];
             }
         }
-
+        System.out.println();
         System.out.println("Sorted Array : " );
 
         for (int arr : sortedArray){
-            System.out.println(arr + " ");
+            System.out.print(arr + " ");
         }
 
         System.out.println(sortedArray[sizeArray - 1]);

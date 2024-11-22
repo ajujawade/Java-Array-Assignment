@@ -7,7 +7,7 @@ public class Assignment_12 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter Size Of Array");
+        System.out.println("Enter Size Of Array : ");
         int sizeArray = scanner.nextInt();
         int[] array = new int[sizeArray];
 

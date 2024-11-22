@@ -1,6 +1,6 @@
 // Java program to find the index of an array element.
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Assignment_5 {
 
@@ -24,6 +24,7 @@ public class Assignment_5 {
         }
 
         boolean indexFound = false;
+        System.out.println();
         System.out.println("Which Element's Index you want to find ?");
         int element = scanner.nextInt();
 

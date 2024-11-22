@@ -1,13 +1,13 @@
 //Java program to find the maximum and minimum value of an array.
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Assignment_8 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter Size Of Array");
+        System.out.println("Enter Size Of Array : ");
         int sizeArray = scanner.nextInt();
         int[] array = new int[sizeArray];
 

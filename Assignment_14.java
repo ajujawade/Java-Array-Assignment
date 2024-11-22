@@ -7,35 +7,36 @@ public class Assignment_14 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter Size Of Array A : ");
+        System.out.println("Enter Column Size of Array A : ");
         int col = scanner.nextInt();
+        System.out.println("Enter Row Size of Array A : ");
         int row = scanner.nextInt();
-        int sizeArr = col + row;
 
-        int[][] arrayA = new int[col][row];
+
+        int[][] arrayA = new int[row][col];
 
         System.out.println("Enter Elements of Array A : ");
 
-        for (int i = 0; i < col; i++) {
-            for (int j = 0; j < row; j++){
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++){
                 arrayA[i][j] = scanner.nextInt();
             }
         }
 
-        int[][] arrayB = new int[col][row];
+        int[][] arrayB = new int[row][col];
 
         System.out.println("Enter Elements of Array B : ");
 
-        for (int i = 0; i < col; i++) {
-            for (int j = 0; j < row; j++){
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++){
                 arrayB[i][j] = scanner.nextInt();
             }
         }
 
         System.out.println("Elements in Array A : ");
 
-        for (int i = 0; i<col; i++) {
-            for (int j = 0; j < row  ; j++){
+        for (int i = 0; i<row; i++) {
+            for (int j = 0; j < col  ; j++){
                 System.out.print(arrayA[i][j] + " ");
             }
             System.out.println();
@@ -44,19 +45,19 @@ public class Assignment_14 {
 
         System.out.println("Elements in Array B : ");
 
-        for (int i = 0; i < col; i++) {
-            for (int j = 0; j < row  ; j++){
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col  ; j++){
                 System.out.print(arrayB[i][j] + " ");
             }
             System.out.println();
         }
 
-        int[][] sumMatrices = new int[col][row];
+        int[][] sumMatrices = new int[row][col];
 
         System.out.println("Addition of Two Matrices : ");
 
-        for (int i = 0; i < col; i++){
-            for (int j = 0; j < row  ; j++){
+        for (int i = 0; i < row; i++){
+            for (int j = 0; j < col  ; j++){
 
                 sumMatrices[i][j] = arrayA[i][j] + arrayB[i][j];
                 System.out.print(sumMatrices[i][j] + " ");

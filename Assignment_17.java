@@ -7,7 +7,7 @@ public class Assignment_17 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter Size Of Array");
+        System.out.println("Enter Size Of Array : ");
         int sizeArray = scanner.nextInt();
         int[] array = new int[sizeArray];
 
@@ -24,41 +24,56 @@ public class Assignment_17 {
         }
         System.out.println();
 
-        int newSize = 0;
+        System.out.println("\n\n Duplicate values in the array : ");
+        int[] printedDuplicates = new int[sizeArray];
+        int duplicateIndex = 0;
 
+        int count = 0;
         boolean hasDuplicate = false;
 
         for (int i = 0; i < sizeArray; i++) {
             for (int j = i + 1; j < sizeArray; j++) {
                 if (array[i] == array[j]) {
-                    newSize++;
-                    hasDuplicate = true;
-                    break;
-                }
-            }
-        }
-
-        int[] updatedArray = new int[newSize];
-
-        for (int i = 0; i < newSize; i++){
-                for (int j = i + 1; j < newSize; j++) {
-                    if (array[i] == array[j]) {
-                        updatedArray[i] = array[i];
+                    boolean alreadyPrinted = false;
+                    for (int k = 0; k < duplicateIndex; k++){
+                        if (printedDuplicates[k] == array[i]){
+                            alreadyPrinted = true;
+                            break;
+                        }
+                    }
+                    if (!alreadyPrinted){
+                        System.out.print(array[i] + " ");
+                        printedDuplicates[duplicateIndex++] = array[i];
+                        hasDuplicate = true;
                     }
                 }
             }
-
-        System.out.println("Updated Array without Duplicate Value : ");
-
-        for (int arr : updatedArray){
-
-            System.out.print(arr + " ");
-
         }
+
 
         if (!hasDuplicate) {
             System.out.println("No Duplicates Found !");
         }
 
+        int [] newArray = new int[sizeArray];
+        int index = 0;
+
+        for (int i = 0; i < sizeArray; i++){
+            boolean isDuplicate = false;
+            for (int j = 0; j < index; j++){
+                if (array[i] == newArray[j]){
+                    isDuplicate = true;
+                    break;
+                }
+            }
+            if (!isDuplicate){
+                newArray[index++] = array[i];
+                count++;
+            }
+        }
+
+        System.out.println("\n\n Length of Array without Duplicates : " + count);
+
     }
+
 }

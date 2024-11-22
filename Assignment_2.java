@@ -1,6 +1,6 @@
 //Java program to sum values of an array.
 
-import  java.util.*;
+import  java.util.Scanner;
 
 public class Assignment_2 {
 

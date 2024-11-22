@@ -8,7 +8,7 @@ public class Assignment_9 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter Size Of Array");
+        System.out.println("Enter Size Of Array : ");
         int sizeArray = scanner.nextInt();
         int[] array = new int[sizeArray];
 
@@ -24,26 +24,11 @@ public class Assignment_9 {
             System.out.println(arr);
         }
 
-//        int[] reversedArray = new int[sizeArray];
-//
-//        int index = sizeArray - 1 ;
 
         System.out.println("Reversed Array : ");
         for(int i = sizeArray - 1; i >= 0; i--){
-            System.out.println(array[i]);
+            System.out.print(array[i] +  " ");
         }
 
-//        for (int num : array){
-//
-//            reversedArray[index--] = num;
-//
-//        }
-//
-//        System.out.println("Reversed Array is : " );
-//
-//        for(int revArr : reversedArray){
-//            System.out.println(revArr);
-//        }
-
-    }
+ }
 }
